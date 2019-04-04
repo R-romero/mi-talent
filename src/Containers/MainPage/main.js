@@ -3,8 +3,6 @@ import Header from '../../Components/Header/header'
 import Social from '../../Components/Social/social'
 import Background from '../../Components/Background/back'
 import SlideNumber from '../../Components/SlideNumber/slide'
-
-
 class MainPage extends Component {
   render() {
     return(
