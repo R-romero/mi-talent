@@ -42,8 +42,8 @@ class Header extends Component {
                 <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
             </NavItem>
-            <Item active={this.state.isNavActive}>Clients</Item>
-            <Item active={this.state.isNavActive}>News</Item>
+            <NavItem><Item active={this.state.isNavActive}>Clients</Item></NavItem>
+            <NavItem><Item active={this.state.isNavActive}>News</Item></NavItem>
           </Navigation>
         </nav>
 

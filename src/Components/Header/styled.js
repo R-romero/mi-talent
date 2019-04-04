@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export const Wrap = styled.div `
   display: flex;
   margin-top: 25px;
-  margin-right: 25px;
-  margin-left: 25px;
-  height: 100px; 
+  margin-right: 60px;
+  margin-left: 60px;
+  height: 80px; 
   justify-content: space-between;
 `
 
@@ -17,38 +17,40 @@ export const Navigation = styled.ul `
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0;
+  padding-top: 5px;
   width: 250px;
 `
 
 export const NavItem = styled.li `
-    margin-right: 40px;
-    color: "#1a1a1d";
+  margin-right: 20px;
+  color: #1a1a1d;
+  font-family: 'Nunito';
+  font-weight: bolder;
+  font-size: 1em;
 `
 
-export const Item = styled.li `
-  margin-right: 40px;
-  font-style: 'Nunito';
-  font-weight: bolder;
-  font-size: 14px;
-  color: "#1a1a1d";
-  display: ${({active}) => active ? 'block' : 'none'};
+export const Item = styled.a `
+  transition: visibility .1s ease;
+  visibility: ${({active}) => active ? 'visible' : 'hidden'};
+  &:hover {
+    color: #8c8c8e;
+  }
 `
 
 export const SearchBar = styled.div `
   display: flex;
   justify-content:flex-end;
-  width: 200px;
+  width: 300px;
   margin-top: 3px;
 `
 
 export const Search = styled.input `
-  padding-top: 3px;
   margin-right: 2px;
-  font-style: 'Nunito';
+  font-family: 'Nunito';
   font-weight: bolder;
-  font-size: 14px;
+  font-size: 1em;
   color: #8c8c8e;
-  height: 15px;
+  height: 18px;
   border: none;
   display: ${({active}) => active ? "block" : "none"};
 `
