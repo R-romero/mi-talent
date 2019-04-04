@@ -27,6 +27,8 @@ export const NavItem = styled.li `
   font-family: 'Nunito';
   font-weight: bolder;
   font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 `
 
 export const Item = styled.a `
