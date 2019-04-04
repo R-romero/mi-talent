@@ -1,12 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import {
+  Wrap,
+  Navigation,
+  Item,
+  Ref,
+} from './styled';
 
-class Social extends Component {
-  render() {
-    return (
+const Social = (props) => (
       <Wrap>
         <Navigation>
           <Item>
-            <Ref>
+            <Ref href='http://facebook.com' target='blank'>
               <svg
                 version="1.1"
                 x="0px"
@@ -14,7 +18,6 @@ class Social extends Component {
                 width="16px"
                 height="16px"
                 viewBox="0 0 16 16"
-                enable-background="new 0 0 16 16"
               >
                 <path
                   fill="#444444"
@@ -24,7 +27,7 @@ class Social extends Component {
             </Ref>
           </Item>
           <Item>
-            <Ref>
+            <Ref href='http://instagram.com' target='blank'>
               <svg
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +36,6 @@ class Social extends Component {
                 width="16px"
                 height="16px"
                 viewBox="0 0 16 16"
-                enable-background="new 0 0 16 16"
               >
                 <circle fill="#444444" cx="12.145" cy="3.892" r="0.96" />{" "}
                 <path
@@ -49,7 +51,7 @@ class Social extends Component {
             </Ref>
           </Item>
           <Item>
-            <Ref>
+            <Ref href='http://youtube.com' target='blank'>
               <svg
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +60,6 @@ class Social extends Component {
                 width="16px"
                 height="16px"
                 viewBox="0 0 16 16"
-                enable-background="new 0 0 16 16"
               >
                 <path
                   fill="#444444"
@@ -68,7 +69,7 @@ class Social extends Component {
             </Ref>
           </Item>
           <Item>
-            <Ref>
+            <Ref href='http://twitter.com' target='blank'>
               <svg
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +78,6 @@ class Social extends Component {
                 width="16px"
                 height="16px"
                 viewBox="0 0 16 16"
-                enable-background="new 0 0 16 16"
               >
                 <path
                   fill="#444444"
@@ -88,6 +88,6 @@ class Social extends Component {
           </Item>
         </Navigation>
       </Wrap>
-    );
-  }
-}
+)
+
+export default Social;
