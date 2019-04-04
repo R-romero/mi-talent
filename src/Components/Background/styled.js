@@ -6,11 +6,11 @@ export const Wrap = styled.div `
   top: 0;
   right: 0;
   z-index: -1;
-  height: 400px;
+  height: 550px;
 `
 
 export const Background = styled.div `
-  width: 40.1%;
+  width: 38.1%;
   height: 100%;
   position: absolute;
   right: 0;
