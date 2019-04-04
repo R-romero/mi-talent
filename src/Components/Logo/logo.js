@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { LogoSvg } from "./styled";
 
-class Logo extends Component {
-  render() {
-    return (
+const Logo = (props) => (
       <LogoSvg viewBox="0 0 594.3 85.3">
         <g>
           <path
@@ -43,8 +41,6 @@ class Logo extends Component {
           />
         </g>
       </LogoSvg>
-    );
-  }
-}
+)
 
 export default Logo
