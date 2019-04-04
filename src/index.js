@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import WebFont from 'webfontloader';
+
+WebFont.load ({
+  google: {
+    families:
+    [
+      'Poppins:400,700,800',
+      'Nunito:400,700,800' ,
+      'sans-serif'
+    ],
+  }
+})
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
