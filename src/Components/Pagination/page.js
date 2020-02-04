@@ -2,19 +2,9 @@ import React, {Component} from 'react';
 import {Wrap, Item, Indicator } from './styled';
 
 class Pagination extends Component {
-  state = {
-    activeIndex: 0,
-  }
-
-  goToSlide(index) {
-    this.setState({
-      activeIndex: index,
-    });
-  }
-
   rows (){
     let returno = [];
-    for (let i=0; i < /*this.props.feedLength*/4; i++){
+    for (let i=0; i < this.props.feedLength; i++){
       returno.push(0) 
     }
 
@@ -26,15 +16,14 @@ class Pagination extends Component {
       <Wrap>
           {this.rows().map((slide, index) => (
             <Item
-              active={this.state.activeItem}
               key={index}
               index={index}
-              activeIndex={this.state.activeIndex}
+              activeIndex={this.props.activeIndex}
               slide={slide}
-              onClick={e => this.goToSlide(index)}
+              onClick={e => this.props.goToSlide(index)}
             >
               0{index + 1}
-              <Indicator index={index} activeIndex={this.state.activeIndex}/>
+              <Indicator index={index} activeIndex={this.props.activeIndex}/>
             </Item>
           ))}
       </Wrap>
