@@ -4,6 +4,9 @@ export const Wrap = styled.ul `
   list-style: none;
   padding:0;
   margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
 `
 
 export const Item = styled.li `

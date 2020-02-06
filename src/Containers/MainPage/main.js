@@ -5,8 +5,10 @@ import Background from "../../Components/Background/back";
 import SlideNumber from "../../Components/SlideNumber/slide";
 import Button from "../../Components/Button/button";
 import Pagination from "../../Components/Pagination/page";
+import HomeCard from "../../Components/HomeCard/card"
 import { connect } from "react-redux";
 import axios from 'axios'
+import { FlexWrapper, SmallContainer } from "./styled";
 
 class MainPage extends Component {
   state = {
@@ -16,7 +18,7 @@ class MainPage extends Component {
 
   componentDidMount() {
       try{
-        axios.get('https://api.myjson.com/bins/brm7k').then( res => this.setState({dataFeed: res.data.data}));
+        axios.get('https://api.myjson.com/bins/1c5x9e').then( res => this.setState({dataFeed: res.data.data}));
       } catch (error){
         console.log(error);
       }
@@ -29,22 +31,21 @@ class MainPage extends Component {
   }
 
   render() {
-    const { newValue } = this.props;
     return (
       <React.Fragment>
         <Background />
         <Header />
+        <FlexWrapper>
+        <SmallContainer>
         <Social />
-        <SlideNumber activeSlide={newValue} />
-        <Button link="http://anichart.net" description="Click Me" />
-        <Pagination />
-        <Background/>
+        <SlideNumber activeSlide={this.state.activeIndex}/>
+        </SmallContainer>
+        <HomeCard feed={this.state.dataFeed} activeIndex={this.state.activeIndex}/>
         
-        <Header/>
-        <Social/>
-        <SlideNumber activeSlide={this.state.activeIndex} />
-        <Button link='http://anichart.net' description='Click Me'/>
         <Pagination activeIndex={this.state.activeIndex} goToSlide={this.goToSlide} feedLength={this.state.dataFeed.length}/>
+        
+        </FlexWrapper>
+        <Button link="http://anichart.net" description="Click Me" />
       </React.Fragment>
     );
   }

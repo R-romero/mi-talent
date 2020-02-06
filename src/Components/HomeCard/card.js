@@ -1,26 +1,28 @@
 import React, { Component } from "react";
-import {} from "styled-components";
+import {Wrap, Title, Line, Subtitle, Content, Play, Slide} from "./styled";
 
 class Card extends Component {
   render() {
+    const props = this.props;
     return (
       <Wrap>
-        {this.props.feed.map((slide, index) => (
-          <Wrap
+        {props.feed.map((slide, index) => (
+          <Slide
             key={index}
             index={index}
-            activeIndex={this.props.activeIndex}
+            activeIndex={props.activeIndex}
             slide={slide}
+            url={props.feed[index].image}
           >
             <Title>
-              {this.props.title}
               <Line />
+              {props.feed[index].title}
             </Title>
-            <Subtitle>{this.props.subtitle}</Subtitle>
+            <Subtitle>{props.feed[index].subtitle}</Subtitle>
             <Content>
               <Play />
             </Content>
-          </Wrap>
+          </Slide>
         ))}
       </Wrap>
     );

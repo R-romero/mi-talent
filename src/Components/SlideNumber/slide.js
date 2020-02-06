@@ -3,8 +3,8 @@ import {Wrap, Line, Number} from './styled'
 
 const SlideNumber = (props) => (
   <Wrap>
-    <Line/>
     <Number>0{props.activeSlide + 1}</Number>
+    <Line/>
   </Wrap>
 )
 
