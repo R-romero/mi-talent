@@ -1,7 +1,7 @@
 import React from 'react'
 import {Wrap, Background} from './styled'
 
-const Back = (props) => (
+const Back = () => (
   <Wrap>
     <Background/>
   </Wrap>
