@@ -19,7 +19,8 @@ export const Title = styled.h2 `
 position: absolute;
 top: 20%;
 left: -15%;
-color: #000;
+text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+color: #E0E0E0;
 font-size: 4em;
 `
 
@@ -35,7 +36,8 @@ export const Subtitle = styled.h3 `
 position: absolute;
 top: calc(20% + 3em);
 left: -13%;
-color: #000;
+color: #E0E0E0;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 font-size: 2em;
 `
 
