@@ -1,35 +1,28 @@
-import React, {Component} from 'react';
-import {Wrap, Item, Indicator } from './styled';
+import React from "react";
+import { Wrap, Item, Indicator } from "./styled";
 
-class Pagination extends Component {
-  rows (){
-    let returno = [];
-    for (let i=0; i < this.props.feedLength; i++){
-      returno.push(0) 
+function Pagination(props) {
+  const drawSlides = () => {
+    let slide = [];
+    for (let index = 0; index < props.feedLength; index++) {
+      slide.push(
+        <Item
+          key={index}
+          index={index}
+          activeIndex={props.activeIndex}
+          slide={index}
+          onClick={e => props.goToSlide(index)}
+        >
+          0{index + 1}
+          <Indicator index={index} activeIndex={props.activeIndex} />
+        </Item>
+      );
     }
 
-    return returno;
-  }
+    return slide;
+  };
 
-  render() {
-    return(
-      <Wrap>
-          {this.rows().map((slide, index) => (
-            <Item
-              key={index}
-              index={index}
-              activeIndex={this.props.activeIndex}
-              slide={slide}
-              onClick={e => this.props.goToSlide(index)}
-            >
-              0{index + 1}
-              <Indicator index={index} activeIndex={this.props.activeIndex}/>
-            </Item>
-          ))}
-      </Wrap>
-    )
-  }
-
+  return <Wrap>{drawSlides()}</Wrap>;
 }
 
 export default Pagination;

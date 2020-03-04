@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import {Wrap, Title, Line, Subtitle, Content, Play, Slide} from "./styled";
 
-class Card extends Component {
-  render() {
-    const props = this.props;
+function Card (props) {
     return (
       <Wrap>
         {props.feed.map((slide, index) => (
@@ -26,7 +24,6 @@ class Card extends Component {
         ))}
       </Wrap>
     );
-  }
 }
 
 export default Card;

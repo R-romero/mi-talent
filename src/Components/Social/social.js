@@ -6,7 +6,7 @@ import {
   Ref,
 } from './styled';
 
-const Social = (props) => (
+const Social = () => (
       <Wrap>
         <Navigation>
           <Item>

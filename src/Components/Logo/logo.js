@@ -1,7 +1,7 @@
 import React from "react";
 import { LogoSvg } from "./styled";
 
-const Logo = (props) => (
+const Logo = () => (
       <LogoSvg viewBox="0 0 594.3 85.3">
         <g>
           <path
